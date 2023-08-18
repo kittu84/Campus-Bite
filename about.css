@@ -92,14 +92,6 @@
     padding:20px 0;
 }
 
-.main_slide div:nth-child(1) span{
-    color:rgb(253,57,8);
-    text-decoration: underline;
-    text-underline-offset:10px;
-    text-decoration-color:rgb(253,176,34);
-}
-
-
 .caterers h5{
     padding-top: 25px;
 }
@@ -109,10 +101,16 @@
     text-decoration: underline;
     text-underline-offset:10px;
     text-decoration-color:rgb(253,176,34);
+    padding-bottom: 25px;
+}
+
+.desc1{
+    padding-bottom:10px 0px;
+    margin-bottom:30px;
 }
 .footer{
-    padding:60px 0;
-    border-top:2px solid rgb(252,184,107);
+    padding:45px 0;
+    border-top:3px solid rgb(252,184,107);
     background-color:rgb(252,222,195);
     display:flex;
     flex-wrap: wrap;
@@ -121,7 +119,13 @@
 }
 
 .footer-1 .logo img{
-    width: 150px;
+    width: 280px;
+    height: 110px;
+    padding-bottom: 20px;
+    padding-top:-20px;
+    border:1px solid rgb(253,176,34);
+    box-shadow:4px rgb(97, 72, 49);
+
 }
 
 .footer-1 p{
@@ -132,16 +136,21 @@
     font-weight:bold;   
 }
 
+.footer-1 address{
+    font-family: "Roboto", sans-serif;
+}
+
 .footer-2{
     text-align: center;
     cursor:pointer;
 }
 
 .footer-2 img{
-    width: 100px;
+    width: 200px;
+    height:200px;
     margin-bottom:15px;
 }
 
 .footer-2 h2{
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Roboto", sans-serif;
 }
