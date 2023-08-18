@@ -342,17 +342,15 @@
 }
 
 .footer-1 .logo img{
-    width:200px;
+    width: 150px;
 }
 
 .footer-1 p{
     cursor:pointer;
     font-size:20px;
     padding:2px;
-    color:rgb(250,40,10);
-    font-weight:bold;
-    font-family: Georgia, Times, 'Times New Roman', serif;
-    
+    color:black;
+    font-weight:bold;   
 }
 
 .footer-2{
@@ -361,7 +359,7 @@
 }
 
 .footer-2 img{
-    width:50px;
+    width: 100px;
     margin-bottom:15px;
 }
 
