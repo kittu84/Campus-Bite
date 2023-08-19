@@ -340,7 +340,7 @@
 }
 
 .footer{
-    padding:60px 0;
+    padding:50px 0;
     border-top:2px solid rgb(252,184,107);
     background-color:rgb(252,222,195);
     display:flex;
@@ -350,11 +350,12 @@
 }
 
 .footer-1 .logo img{
-    width: 280px;
-    height: 110px;
+    width: 370px;
+    height: 140px;
     padding-bottom: 20px;
     padding-top:-20px;
     box-shadow:4px rgb(97, 72, 49);
+
 }
 
 .footer-1 p{

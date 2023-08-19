@@ -76,8 +76,13 @@
     display: flex;
     justify-content:center;
     padding-top:0px;
+    height:800px;
+    padding-right:-70px;
+}
+
+.main_slide div:nth-child(2) img{
+    width:630px;
     height:700px;
-    padding-right:-60px;
 }
 
 .main_slide div:nth-child(1){
@@ -92,6 +97,12 @@
     padding:20px 0;
 }
 
+.main_slide div:nth-child(1) h1{
+    font-size:46px;
+    padding:20px 0;
+    padding-top: 60px;
+
+}
 .caterers h5{
     padding-top: 25px;
 }
@@ -119,18 +130,17 @@
 }
 
 .footer-1 .logo img{
-    width: 280px;
-    height: 110px;
+    width: 370px;
+    height: 140px;
     padding-bottom: 20px;
     padding-top:-20px;
-    border:1px solid rgb(253,176,34);
     box-shadow:4px rgb(97, 72, 49);
 
 }
 
 .footer-1 p{
     cursor:pointer;
-    font-size:20px;
+    font-size:16px;
     padding:2px;
     color:black;
     font-weight:bold;   
@@ -138,6 +148,7 @@
 
 .footer-1 address{
     font-family: "Roboto", sans-serif;
+    
 }
 
 .footer-2{
