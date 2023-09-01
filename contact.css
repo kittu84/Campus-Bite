@@ -221,7 +221,6 @@
     border: 1px solid rgb(252,120,20); 
     box-shadow: 0 10px 15px rgb(250,120,69);
     transition: all 0.2s; 
-    
 }
 
 .red_btn i{
@@ -256,7 +255,6 @@
     padding-bottom: 20px;
     padding-top:-20px;
     box-shadow:4px rgb(97, 72, 49);
-
 }
 
 .footer-1 p{
