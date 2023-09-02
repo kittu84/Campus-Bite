@@ -31,7 +31,10 @@
 
 .header ul{
     display: flex;
-    align-items: center; 
+    align-items: right; 
+    position: absolute;
+    right: 110px;
+
 }
 
 .header ul li:hover{
@@ -60,17 +63,26 @@ body{
 
 .f-category{
     background-color: rgb(255,214,176);
-    margin: 3px;
+    margin-top: 5px;
     height: 80px;
-    padding-top: 2%;
-
+    padding-top: 7%;
+    width: 200px;
+    text-align: center;
+    font-size: 8px;
+    font-family: Verdana, Geneva , Tahoma, sans-serif;
 }
 
 .f-category1{
     background-color: rgb(252,184,107);
-    margin: 3px;
+    margin-top: 5px;
     height: 80px;
-    padding-top: 2%;
+    padding-top: 7%;
+    width: 200px;
+    font-size: 8px;
+    text-align: center;
+    font-family: Verdana, Geneva , Tahoma, sans-serif;
+    
+    
 
 }
 
@@ -78,4 +90,14 @@ body{
     display: flex;
     justify-content: space-around;
     flex-direction: row;
+}
+
+.food_category{
+    display: flex;
+    flex-direction: row;
+    font-size: 8px;
+}
+.v-food{
+    width: 100%;
+    
 }
