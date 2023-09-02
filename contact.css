@@ -146,18 +146,22 @@
     width:40%;
     padding:40px;
     background:#fff;
+    height:480px;
 }
 
 .contactForm h2{
     font-size:30px;
     color:#333;
-    font-weight:500;
+    font-weight:600;
+    text-align: center;
+    color:rgb(253,77,8);
+
 }
 
 .contactForm .inputBox{
     position:relative;
     width:100%;
-    margin-top:10px;
+    margin-top:30px;
 }
 
 .contactForm .inputBox input,.contactForm .inputBox textarea{
@@ -168,7 +172,7 @@
     border:none;
     border-bottom: 2px solid #333;
     outline:none;
-    resize:none;
+    
 }
 
 .contactForm .inputBox span{
@@ -178,7 +182,7 @@
     font-size:16px;
     margin: 10px 0;
     pointer-events:none;
-    transition:0.5s;
+    transition:0.3s ease-out;
     color:#666;
 }
 
@@ -187,12 +191,13 @@
 .contactForm .inputBox textarea:focus ~ span,
 .contactForm .inputBox textarea:valid ~ span
 {
-    color:#e91e63;
-    font-size:12px;
-    transform: translate(-20px);
-
+    display: none;
 }
 
+.contactForm .inputBox input:not(:placeholder-shown) ~ span,
+.contactForm .inputBox textarea:not(:placeholder-shown) ~ span {
+    transform: translateY(-20px) translateX(-10px); 
+}
 .contactForm .inputBox input[type="submit"]{
     width:100px;
     background:#00bcd4;
@@ -249,7 +254,6 @@
     padding-bottom: 20px;
     padding-top:-20px;
     box-shadow:4px rgb(97, 72, 49);
-
 }
 
 .footer-1 p{
