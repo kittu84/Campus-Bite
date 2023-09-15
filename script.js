@@ -9,3 +9,18 @@ registerLink.addEventListener('click',()=> {
 LoginLink.addEventListener('click',()=> {
     wrapper.classList.remove('active');
 });
+
+
+// JavaScript in login.html
+document.addEventListener('DOMContentLoaded', function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const registerParam = urlParams.get('register');
+
+    if (registerParam === 'true') {
+        // Show the registration form
+        const wrapper = document.querySelector('.wrapper');
+        if (wrapper) {
+            wrapper.classList.add('active');
+        }
+    }
+});

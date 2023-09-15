@@ -158,46 +158,47 @@
 
 }
 
-.contactForm .inputBox{
-    position:relative;
-    width:100%;
-    margin-top:30px;
+
+
+.contactForm .input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;  
+    font-size: 1em;
+    color: #162938;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
 }
 
-.contactForm .inputBox input,.contactForm .inputBox textarea{
-    width:100%;
-    padding:5px 0;
-    font-size:16px;
-    margin: 10px 0;
-    border:none;
-    border-bottom: 2px solid #333;
-    outline:none;
-    
+.contactForm .input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #162938;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
 }
 
-.contactForm .inputBox span{
-    position:absolute;
-    left:0;
-    padding:5px 0;
-    font-size:16px;
-    margin: 10px 0;
-    pointer-events:none;
-    transition:0.3s ease-out;
-    color:#666;
+.contactForm .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin :30px 0;
 }
 
-.contactForm .inputBox input:focus ~ span,
-.contactForm .inputBox input:valid ~ span
-.contactForm .inputBox textarea:focus ~ span,
-.contactForm .inputBox textarea:valid ~ span
-{
-    display: none;
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top:-5px;
 }
 
-.contactForm .inputBox input:not(:placeholder-shown) ~ span,
-.contactForm .inputBox textarea:not(:placeholder-shown) ~ span {
-    transform: translateY(-20px) translateX(-10px); 
-}
+
 .contactForm .inputBox input[type="submit"]{
     width:100px;
     background:#00bcd4;
