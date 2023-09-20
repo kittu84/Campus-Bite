@@ -50,6 +50,8 @@
     padding:0 15px;
     font-size:14 px;
     font-weight: bold;
+    position: relative;
+    bottom: 10px;
     
 }
 
@@ -100,4 +102,16 @@ body{
 .v-food{
     width: 100%;
     
+}
+
+#cart_btn{
+    width: 100px;
+    height: 50px;
+    background-color: rgb(252,184,107);
+    border-radius: 5px;
+    padding: 5px;
+    padding-top: 15px;
+    position: relative;
+    bottom: 15px;
+    border-color: rgb(252,184,107);
 }
