@@ -101,4 +101,13 @@
     line-height: 35px;
 }
 
+.add_more_items{
+    display: none;   
+}
+
+.add_more_items .count{
+    margin-top: 34px;
+    margin-left: 42px;
+
+}
 
