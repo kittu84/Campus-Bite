@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snacks</title>
+    <link rel="stylesheet" href="../css/items.css">
+</head>
+<body>
+    <div class="total-items">
+        <div class="total-items-sub" id="itemContainer">
+            <!-- Items will be added here dynamically -->
+        </div>
+    </div>
+
+    <script>
+        // Sample data for items
+        const itemsData = [
+            {
+                id: 'item1',
+                name: 'Bread butter',
+                price: 'Rs. 12',
+                imageSrc: '../Images/bread-butter.jpg',
+                add: 'add_btn1'
+            },
+            {
+                id: 'item2',
+                name: 'Bread butter jam',
+                price: 'Rs. 14',
+                imageSrc: '../Images/bread-butter-jam.jpg',
+                add: 'add_btn2'
+            },
+            {
+                id: 'item3',
+                name: 'Vegetable sandwich',
+                price: 'Rs. 22',
+                imageSrc: '../Images/veg-sandwich.jpg',
+                add: 'add_btn3'
+            },
+            // Add more items as needed
+        ];
+
+        // Function to create an item element
+        function createItemElement(item) {
+            const itemDiv = document.createElement('div');
+            itemDiv.classList.add('item');
+
+            const imageDiv = document.createElement('div');
+            imageDiv.innerHTML = `<img src="${item.imageSrc}" alt="${item.name}">`;
+
+            const itemName = document.createElement('h3');
+            itemName.textContent = item.name;
+
+            const priceButtonDiv = document.createElement('div');
+            priceButtonDiv.classList.add('price-button');
+
+            const price = document.createElement('h4');
+            price.textContent = item.price;
+
+            const addButton = document.createElement('button');
+            addButton.classList.add('white_btn');
+            addButton.textContent = 'Add';
+
+            const addMoreItemsDiv = document.createElement('div');
+            addMoreItemsDiv.classList.add('add_more_items');
+            addMoreItemsDiv.style.display = 'none';
+
+            const decrementButton = document.createElement('button');
+            decrementButton.classList.add('white_btn');
+            decrementButton.textContent = '-';
+            decrementButton.onclick = () => decrement(`count_of_items${item.id}`, `add_more_items${item.id}`, `add_btn${item.id}`, `price${item.id}`);
+
+            const countOfItems = document.createElement('p');
+            countOfItems.classList.add('count');
+            countOfItems.id = `count_of_items${item.id}`;
+            countOfItems.textContent = '1';
+
+            const incrementButton = document.createElement('button');
+            incrementButton.classList.add('white_btn');
+            incrementButton.textContent = '+';
+            incrementButton.onclick = () => increment(`count_of_items${item.id}`);
+
+            // Append elements to the itemDiv
+            priceButtonDiv.appendChild(price);
+            priceButtonDiv.appendChild(addButton);
+            addMoreItemsDiv.appendChild(decrementButton);
+            addMoreItemsDiv.appendChild(countOfItems);
+            addMoreItemsDiv.appendChild(incrementButton);
+            itemDiv.appendChild(imageDiv);
+            itemDiv.appendChild(itemName);
+            itemDiv.appendChild(priceButtonDiv);
+            itemDiv.appendChild(addMoreItemsDiv);
+
+            return itemDiv;
+        }
+
+        // Function to add items to the container
+        function addItemsToContainer() {
+            const itemContainer = document.getElementById('itemContainer');
+
+            itemsData.forEach((item) => {
+                const itemElement = createItemElement(item);
+                itemContainer.appendChild(itemElement);
+            });
+        }
+
+        // Function to increment the count of items
+        function increment(count_of_items) {
+            // Your increment logic here
+        }
+
+        // Function to decrement the count of items
+        function decrement(count_of_items, add_more_items, button_Id, price_item) {
+            // Your decrement logic here
+        }
+
+        // Initialize the page
+        addItemsToContainer();
+    </script>
+</body>
+</html>

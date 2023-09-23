@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Wallet Balance</title>
+</head>
+<body>
+    <h1>Check Wallet Balance</h1>
+    <div>
+        <label for="password">Enter Password:</label>
+        <input type="password" id="password" placeholder="Password" required>
+        <button id="checkButton">Check Balance</button>
+    </div>
+    <div id="balanceResult"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const passwordInput = document.getElementById("password");
+            const checkButton = document.getElementById("checkButton");
+            const balanceResultDiv = document.getElementById("balanceResult");
+            const correctPassword = "hello"; // Change this to your actual password
+
+            checkButton.addEventListener("click", function() {
+                const enteredPassword = passwordInput.value;
+
+                if (enteredPassword === correctPassword) {
+                    // Correct password, display the balance
+                    // You can retrieve the balance from a server or a shared storage here
+                    balanceResultDiv.innerHTML = `Your balance is ${wallet.balance.toFixed(2)}.`;
+                    // alert(`Added ${amount.toFixed(2)} to your wallet. Your new balance is ${wallet.balance.toFixed(2)}.`);
+                } else {
+                    // Incorrect password
+                    balanceResultDiv.innerHTML = "Incorrect password. Please try again.";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
