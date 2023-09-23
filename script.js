@@ -11,7 +11,7 @@ LoginLink.addEventListener('click',()=> {
 });
 
 
-// JavaScript in login.html
+
 document.addEventListener('DOMContentLoaded', function () {
     const urlParams = new URLSearchParams(window.location.search);
     const registerParam = urlParams.get('register');
