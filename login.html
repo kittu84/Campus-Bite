@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Account</title>
     <link rel="stylesheet" href="css/style_login.css">
 </head>
+
 <body>
     <header>
         <div class="header">
-        <div class="logo">
-            <img src="./images/NU_09.jpg" alt="NU LOGOG">
-        </div>
-        <div class="bar">
-            <i class="fa-solid fa-bars">  </i>
-            <i class="fa-solid fa-xmark" id="hdcross"> </i>
-        </div>
-        <div class="nav">
-            <ul>
-                <a href="index.html" target="_self">
-                    <li> Home </li>             
+            <div class="logo">
+                <img src="./images/NU_09.jpg" alt="NU LOGOG">
+            </div>
+            <div class="bar">
+                <i class="fa-solid fa-bars"> </i>
+                <i class="fa-solid fa-xmark" id="hdcross"> </i>
+            </div>
+            <div class="nav">
+                <ul>
+                    <a href="index.html" target="_self">
+                        <li id="home"> Home </li>
                     </a>
-                <a href="about.html" target="_self">
-                    <li> About us </li>             
+                    <a href="about.html" target="_self">
+                        <li id="about-us"> About us </li>
                     </a>
-                <a href="contact.html" target="_self">
-                    <li> Contact </li>             
+                    <a href="contact.html" target="_self">
+                        <li id="contact-us"> Contact </li>
                     </a>
-                <a href="#">
-                     <li> Add Balance </li>             
-                     </a>          
-            </ul>
-        </div>
-        <!-- <div class="account"> 
+                    <a href="add-money.html">
+                        <li id="add-balance"> Add Balance </li>
+                    </a>
+                </ul>
+            </div>
+            <!-- <div class="account"> 
             <ul>
                 <a href="#">
                     <li> <i class="fa-solid fa-user" id="userlap"></i>
@@ -47,81 +49,158 @@
                     
             </ul>
         </div> -->
-    
+
         </div>
     </header>
     <div class="login">
-    <div class="wrapper">
-        <!--<span class="icon-close"><ion-icon name="close"></ion-icon></ion-icon></span> -->
-        <div class="form-box login">
-            <h2>Log In</h2>
-            <form action="#">
-                <div class="input-box">
-                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                    <input type="email" required>
-                    <label>Email</label>
-                </div>
+        <div class="wrapper">
+            <!-- <span class="icon-close"><ion-icon name="close"></ion-icon></ion-icon></span> -->
+            <div class="form-box login">
+                <h2>Log In</h2>
+                <form action="#">
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                        <input type="email" required id="login_eml">
+                        <label>Email</label>
+                    </div>
 
-                <div class="input-box">
-                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                    <input type="password" required>
-                    <label>Password</label>
-                </div>
-                <div class="remember-forgot">
-                    <label><input type="checkbox">
-                        Remember Me</label>
-                    <a href="#">Forgot Password?</a>
-                </div>
-                <button type="submit" class="btn">Login</button>
-                <div class="login-register">
-                    <p>Don't have an account?<a href="#" class="register-link">Register</a></p>
-                </div>
-            </form>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                        <input type="password" required id="login_pwd">
+                        <label>Password</label>
+                    </div>
+                    <div class="remember-forgot"  style="visibility: hidden;">
+                        <label><input type="checkbox">
+                            Remember Me</label>
+                        <a href="#">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="btn" id="login_btn">Login</button>
+                    <div class="login-register">
+                        <p>Don't have an account?<a href="#" class="register-link">Register</a></p>
+                    </div>
+                </form>
+            </div>
+
+            <div class="form-box register">
+                <h2>Registration</h2>
+                <form action="#">
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="person"></ion-icon></span>
+                        <input type="text" id="username" required>
+                        <label>Username</label>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                        <input type="email" id="register_eml" required>
+                        <label>Email</label>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                        <input type="password" id="register_pwd" required>
+                        <label>Password</label>
+                    </div>
+                    <div class="remember-forgot">
+                        <label><input type="checkbox">
+                            I agree to the terms & Conditions</label>
+
+                    </div>
+                    <button type="submit" class="btn" id="register_btn">Register</button>
+                    <div class="login-register">
+                        <p>Already have an account?<a href="#" class="login-link">Login</a></p>
+                    </div>
+                </form>
+            </div>
+
         </div>
 
-        <div class="form-box register">
-            <h2>Registration</h2>
-            <form action="#">
-                <div class="input-box">
-                    <span class="icon"><ion-icon name="person"></ion-icon></span>
-                    <input type="text" required>
-                    <label>Username</label>
-                </div>
+        <div class="plate">
+            <img src="./images/food plate.png" alt="">
 
-                <div class="input-box">
-                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                    <input type="email" required>
-                    <label>Email</label>
-                </div>
-
-                <div class="input-box">
-                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                    <input type="password" required>
-                    <label>Password</label>
-                </div>
-                <div class="remember-forgot">
-                    <label><input type="checkbox">
-                        I agree to the terms & Conditions</label>
-                    
-                </div>
-                <button type="submit" class="btn">Register</button>
-                <div class="login-register">
-                    <p>Already have an account?<a href="#" class="login-link">Login</a></p>
-                </div>
-            </form>
         </div>
-
     </div>
-
-    <div class="plate">
-        <img src="./images/food plate.png" alt="">
-
-    </div>
-</div>
     <script src="script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        // Get references to the HTML elements
+        const home_pg = document.getElementById("home");
+        const aboutus_pg = document.getElementById("about-us");
+        const contactus_pg = document.getElementById("contact-us");
+        const addbalance_pg = document.getElementById("add-balance");
 
-    
+        home_pg.style.display = "none";
+        aboutus_pg.style.display = "none";
+        contactus_pg.style.display = "none";
+        addbalance_pg.style.display = "none";
+        const email = document.getElementById('register_eml');
+        const password = document.getElementById('register_pwd');
+        const writeDataButton = document.getElementById('register_btn');
+        
+        i = 2;
+        const dataToWrite = {
+            email: {
+                email1: 'tanishkamunot3003@gmail.com',
+            },
+            password: {
+                password1: '123'
+            }
+            
+        };
+
+        
+        writeDataButton.addEventListener('click', () => {
+            
+            const email_value = email.value;
+            const password_value = password.value; 
+            
+
+           
+            dataToWrite.email["email" + i] = email_value;
+            dataToWrite.password["password" + i] = password_value;
+            i = i + 1;
+
+            
+
+            console.log(dataToWrite);
+            alert("You have been successfully registered");
+            
+        });
+
+
+        const userInput_eml = document.getElementById('login_eml');
+        const userInput_pwd = document.getElementById('login_pwd');
+        const checkButton = document.getElementById('login_btn');
+
+
+        checkButton.addEventListener('click', () => {
+            const inputValue_eml = userInput_eml.value.trim(); 
+            const inputValue_pwd = userInput_pwd.value.trim(); 
+
+
+
+
+            for (let i = 1; i < 3 + 1; i++) {
+                if (dataToWrite.email["email" + i] === inputValue_eml) {
+                    if (dataToWrite.password["password" + i] === inputValue_pwd) {
+                        home_pg.style.display = "block";
+                        aboutus_pg.style.display = "block";
+                        contactus_pg.style.display = "block";
+                        addbalance_pg.style.display = "block";
+                        alert("Welcome!!!!!");
+
+                    }
+                    else {
+                        alert("Invalid username or password");
+                    }
+                }
+            }
+
+
+        });
+    </script>
+
 </body>
+
 </html>

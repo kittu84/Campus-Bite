@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <!-- <link rel="stylesheet" href="css/cart.css"> You can link to your own CSS file for styling -->
+</head>
+<body>
+    <header>
+        <h1>Your Cart</h1>
+    </header>
+    <main>
+        <div id="cart-items">
+            <!-- Cart items will be displayed here dynamically -->
+        </div>
+        <div id="cart-total">
+            <!-- Total price will be displayed here dynamically -->
+        </div>
+    </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    // Retrieve cart data from sessionStorage
+    const price = sessionStorage.getItem("price");
+    const count_items =sessionStorage.getItem("count_items");
+    console.log(count_items);
+    console.log(price);
+    let cart_items=document.getElementById("cart-total");
+    cart_items.innerHTML+=price+" "+count_items;
+});
+   
+    </script> <!-- Your cart JavaScript file -->
+</body>
+</html>

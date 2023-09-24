@@ -1,82 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>South Indian</title>
     <link rel="stylesheet" href="../css/items.css">
+    <script src="../js/menu_items_all.js"></script>
 </head>
+
 <body>
     <div class="total-items">
-    <div class="total-items-sub">
-    <div class="item">
-        <div>
-            <img src="../Images/plain-dosa.jpg" alt="Plain dosa">
-        </div>
-        <h3>Plain dosa</h3>
-        <div class="price-button">
-        <h4>Rs. 29</h4>
-        <button class="white_btn">Add</button> 
-    </div>
-    </div>
+        <div class="total-items-sub">
+            <div class="item">
+                <div>
+                    <img src="../Images/plain-dosa.jpg" alt="Plain dosa">
+                </div>
+                <h3>Plain dosa</h3>
+                <div class="price-button">
+                    <h4 id="price13">Rs. 29</h4>
+                    <button class="white_btn" id="add_btn13"
+                        onclick="add_more('add_btn13','price13','add_more_items13')">Add</button>
+                    <div class="add_more_items" id="add_more_items13">
+                        <button class="white_btn" id="add_btn13"
+                            onclick="decrement('count_of_items13','add_more_items13','add_btn13','price13')">-</button>
+                        <p class="count" id="count_of_items13">1</p>
+                        <button class="white_btn" id="add_btn13" onclick="increment('count_of_items13')">+</button>
 
-    <div class="item">
-        <div>
-            <img src="../Images/masala-dosa.jpg" alt="Masala dosa">
-        </div>
-        <h3>Masala dosa</h3>
-        <div class="price-button">
-            <h4>Rs. 50</h4>
-        <button class="white_btn">Add</button> 
-    </div>
-    </div>
+                    </div>
+                </div>
+            </div>
 
-    <div class="item">
-        <div>
-            <img src="../Images/masala-uttapam.jpg" alt="Masala uttapam">
-        </div>
-        <h3>Masala uttapam</h3>
-        <div class="price-button">
-            <h4>Rs. 39</h4>
-        <button class="white_btn">Add</button> 
-    </div>
-    </div>
-</div>
-<div class="total-items-sub">
-    <div class="item">
-        <div>
-            <img src="../Images/tomato-uttapam.jpg" alt="Tomato uttapam">
-        </div>
-        <h3>Tomato uttapam</h3>
-        <div class="price-button">
-            <h4>Rs. 33</h4>
-        <button class="white_btn">Add</button> 
-    </div>
-    </div>
+            <div class="item">
+                <div>
+                    <img src="../Images/masala-dosa.jpg" alt="Masala dosa">
+                </div>
+                <h3>Masala dosa</h3>
+                <div class="price-button">
+                    <h4 id="price14">Rs. 50</h4>
+                    <button class="white_btn" id="add_btn14"
+                        onclick="add_more('add_btn14','price14','add_more_items14')">Add</button>
+                    <div class="add_more_items" id="add_more_items14">
+                        <button class="white_btn" id="add_btn14"
+                            onclick="decrement('count_of_items14','add_more_items14','add_btn14','price14')">-</button>
+                        <p class="count" id="count_of_items14">1</p>
+                        <button class="white_btn" id="add_btn14" onclick="increment('count_of_items14')">+</button>
 
-    <div class="item">
-        <div>
-            <img src="../Images/mix-uttapam.jpg" alt="Mix uttapam">
-        </div>
-        <h3>Mix uttapam</h3>
-        <div class="price-button">
-            <h4>Rs. 60</h4>
-        <button class="white_btn">Add</button> 
-    </div>
-    </div>
+                    </div>
+                </div>
+            </div>
 
-    <div class="item">
-        <div>
-            <img src="../Images/onion-uttapam.jpg" alt="Onion uttapam">
+            <div class="item">
+                <div>
+                    <img src="../Images/masala-uttapam.jpg" alt="Masala uttapam">
+                </div>
+                <h3>Masala uttapam</h3>
+                <div class="price-button">
+                    <h4 id="price15">Rs. 39</h4>
+                    <button class="white_btn" id="add_btn15"
+                        onclick="add_more('add_btn15','price15','add_more_items15')">Add</button>
+                    <div class="add_more_items" id="add_more_items15">
+                        <button class="white_btn" id="add_btn15"
+                            onclick="decrement('count_of_items15','add_more_items15','add_btn15','price15')">-</button>
+                        <p class="count" id="count_of_items15">1</p>
+                        <button class="white_btn" id="add_btn15" onclick="increment('count_of_items15')">+</button>
+
+                    </div>
+                </div>
+            </div>
         </div>
-        <h3>Onion uttapam</h3>
-        <div class="price-button">
-            <h4>Rs. 60</h4>
-        <button class="white_btn">Add</button> 
+        <div class="total-items-sub">
+            <div class="item">
+                <div>
+                    <img src="../Images/tomato-uttapam.jpg" alt="Tomato uttapam">
+                </div>
+                <h3>Tomato uttapam</h3>
+                <div class="price-button">
+                    <h4 id="price16">Rs. 33</h4>
+                    <button class="white_btn" id="add_btn16"
+                        onclick="add_more('add_btn16','price16','add_more_items16')">Add</button>
+                    <div class="add_more_items" id="add_more_items16">
+                        <button class="white_btn" id="add_btn16"
+                            onclick="decrement('count_of_items16','add_more_items16','add_btn16','price16')">-</button>
+                        <p class="count" id="count_of_items16">1</p>
+                        <button class="white_btn" id="add_btn16" onclick="increment('count_of_items16')">+</button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div>
+                    <img src="../Images/mix-uttapam.jpg" alt="Mix uttapam">
+                </div>
+                <h3>Mix uttapam</h3>
+                <div class="price-button">
+                    <h4 id="price17">Rs. 60</h4>
+                    <button class="white_btn" id="add_btn17"
+                        onclick="add_more('add_btn17','price17','add_more_items17')">Add</button>
+                    <div class="add_more_items" id="add_more_items17">
+                        <button class="white_btn" id="add_btn17"
+                            onclick="decrement('count_of_items17','add_more_items17','add_btn17','price17')">-</button>
+                        <p class="count" id="count_of_items17">1</p>
+                        <button class="white_btn" id="add_btn17" onclick="increment('count_of_items17')">+</button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div>
+                    <img src="../Images/onion-uttapam.jpg" alt="Onion uttapam">
+                </div>
+                <h3>Onion uttapam</h3>
+                <div class="price-button">
+                    <h4 id="price18">Rs. 29</h4>
+                    <button class="white_btn" id="add_btn18"
+                        onclick="add_more('add_btn18','price18','add_more_items18')">Add</button>
+                    <div class="add_more_items" id="add_more_items18">
+                        <button class="white_btn" id="add_btn18"
+                            onclick="decrement('count_of_items18','add_more_items18','add_btn18','price18')">-</button>
+                        <p class="count" id="count_of_items18">1</p>
+                        <button class="white_btn" id="add_btn18" onclick="increment('count_of_items18')">+</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    </div>
-</div>
-</div>
 
 </body>
+
 </html>

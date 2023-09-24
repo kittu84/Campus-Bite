@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add-money</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <link rel="stylesheet" href="css/add-money.css">
+</head>
+<body>
+    <header>
+        <div class="header">
+        <div class="logo">
+            <img src="./images/NU_09.jpg" alt="NU LOGOG">
+        </div>
+        <div class="bar">
+            <i class="fa-solid fa-bars">  </i>
+            <i class="fa-solid fa-xmark" id="hdcross"> </i>
+        </div>
+        <div class="nav">
+            <ul>
+                <a href="index.html" target="_self">
+                    <li> Home </li>             
+                    </a>
+                <a href="about.html" target="_self">
+                    <li> About us </li>             
+                    </a>
+                <a href="contact.html" target="_self">
+                    <li> Contact </li>             
+                    </a>
+                <a href="add-money.html">
+                     <li> Add Balance </li>             
+                     </a>          
+            </ul>
+        </div>
+        </div>
+    </header>
+    <div class="login">
+    <div class="wrapper">
+        <div class="form-box login">
+            <h2>ADD MONEY</h2>
+            
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="number" id="amount" required>
+                    <label>ENTER AMOUNT</label>
+                </div>
+                <button class="btn" id="addButton">ADD</button>
+                <p id="balance">Your current balance is: Rs. 0</p>   
+                     
+                </div>
+    
+        </div>
+
+        
+
+    </div>
+
+    <div class="plate">
+        <img src="./images/food plate.png" alt="">
+
+    </div>
+</div>
+    <script src="add-money.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    
+</body>
+</html>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+            const amountInput = document.getElementById("amount");
+            const addButton = document.getElementById("addButton");
+            const checkBalanceButton = document.getElementById("checkBalanceButton");
+            const balanceResultDiv = document.getElementById("BALANCERESULT"); 
+            const balanceValue=document.getElementById("balance");
+
+            const wallet = {
+                balance: 0.00, // Initialize with some balance
+                addMoney: function(amount) {
+                    this.balance += amount;
+                }
+            };
+
+            addButton.addEventListener("click", function() {
+                const amount = parseFloat(amountInput.value);
+                if (isNaN(amount) || amount <= 0) {
+                    alert("Please enter a valid amount to add.");
+                } else {
+                    wallet.addMoney(amount);
+                    amountInput.value = ""; 
+                    balanceValue.innerHTML = `Your current balance is &#8377; ${wallet.balance.toFixed(2)}`;
+                    // alert(`Added ${amount.toFixed(2)} to your wallet. Your new balance is ${wallet.balance.toFixed(2)}.`);
+                    
+
+                }
+            });
+
+            
+        });
+</script>
+</html>
