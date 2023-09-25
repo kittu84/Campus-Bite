@@ -77,6 +77,7 @@
 </html>
 
 <script>
+   
 document.addEventListener("DOMContentLoaded", function() {
             const amountInput = document.getElementById("amount");
             const addButton = document.getElementById("addButton");
@@ -100,6 +101,8 @@ document.addEventListener("DOMContentLoaded", function() {
                     amountInput.value = ""; 
                     balanceValue.innerHTML = `Your current balance is &#8377; ${wallet.balance.toFixed(2)}`;
                     // alert(`Added ${amount.toFixed(2)} to your wallet. Your new balance is ${wallet.balance.toFixed(2)}.`);
+                    
+                    sessionStorage.setItem('cash',JSON.stringify('wallet'));
                     
 
                 }

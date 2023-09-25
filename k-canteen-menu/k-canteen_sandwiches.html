@@ -23,7 +23,7 @@
                     <div class="add_more_items" id="add_more_items7">
                         <button class="white_btn" id="add_btn7" onclick="decrement('count_of_items7','add_more_items7','add_btn7','price7','name7')">-</button>
                         <p class="count" id="count_of_items7">1</p>
-                        <button class="white_btn" id="add_btn7" onclick="increment('count_of_items7','name7')">+</button>
+                        <button class="white_btn" id="add_btn7" onclick="increment('count_of_items7','name7','price7')">+</button>
                     </div>
                 </div>
             </div>
@@ -39,7 +39,7 @@
                     <div class="add_more_items" id="add_more_items8">
                         <button class="white_btn" id="add_btn8" onclick="decrement('count_of_items8','add_more_items8','add_btn8','price8','name8')">-</button>
                         <p class="count" id="count_of_items8">1</p>
-                        <button class="white_btn" id="add_btn8" onclick="increment('count_of_items8','name8')">+</button>
+                        <button class="white_btn" id="add_btn8" onclick="increment('count_of_items8','name8','price8')">+</button>
                     </div>
                 </div>
             </div>
@@ -55,7 +55,7 @@
                     <div class="add_more_items" id="add_more_items9">
                         <button class="white_btn" id="add_btn9" onclick="decrement('count_of_items9','add_more_items9','add_btn9','price9','name9')">-</button>
                         <p class="count" id="count_of_items9">1</p>
-                        <button class="white_btn" id="add_btn9" onclick="increment('count_of_items9','name9')">+</button>
+                        <button class="white_btn" id="add_btn9" onclick="increment('count_of_items9','name9','price9')">+</button>
                     </div>
                 </div>
             </div>
@@ -72,7 +72,7 @@
                     <div class="add_more_items" id="add_more_items10">
                         <button class="white_btn" id="add_btn10" onclick="decrement('count_of_items10','add_more_items10','add_btn10','price10','name10')">-</button>
                         <p class="count" id="count_of_items10">1</p>
-                        <button class="white_btn" id="add_btn10" onclick="increment('count_of_items10','name10')">+</button>
+                        <button class="white_btn" id="add_btn10" onclick="increment('count_of_items10','name10','price10')">+</button>
                     </div>
                 </div>
             </div>
@@ -88,7 +88,7 @@
                     <div class="add_more_items" id="add_more_items11">
                         <button class="white_btn" id="add_btn11" onclick="decrement('count_of_items11','add_more_items11','add_btn11','price11','name11')">-</button>
                         <p class="count" id="count_of_items11">1</p>
-                        <button class="white_btn" id="add_btn11" onclick="increment('count_of_items11','name11')">+</button>
+                        <button class="white_btn" id="add_btn11" onclick="increment('count_of_items11','name11','price11')">+</button>
                     </div>
                 </div>
             </div>
@@ -104,7 +104,7 @@
                     <div class="add_more_items" id="add_more_items12">
                         <button class="white_btn" id="add_btn12" onclick="decrement('count_of_items12','add_more_items12','add_btn12','price12','name12')">-</button>
                         <p class="count" id="count_of_items12">1</p>
-                        <button class="white_btn" id="add_btn12" onclick="increment('count_of_items12','name12')">+</button>
+                        <button class="white_btn" id="add_btn12" onclick="increment('count_of_items12','name12','price12')">+</button>
                     </div>
                 </div>
             </div>
@@ -113,82 +113,90 @@
 
 </body>
 
- <!-- <script>
-
-
-    function add_more(button_Id, price_item,add_more_items) {
-        let add_btn = document.getElementById(button_Id);
-        let price = document.getElementById(price_item);
-        div_add_items=document.getElementById(add_more_items);
-        div_add_items.style.display="block";
-        div_add_items.style.display="flex";
-        add_btn.style.display = "none";
-        price.style.display = "none";
-
-    }
-
-    function increment(count_of_items) {
-            let count_items = document.getElementById(count_of_items);
-            let x = parseInt(count_items.innerHTML); // Get the current count as an integer
-            x = x + 1;
-            count_items.innerHTML = x;
-
-
-    }
-    function decrement(count_of_items,add_more_items,button_Id,price_item) {
-        let add_btn = document.getElementById(button_Id);
-        let price = document.getElementById(price_item);
-        let count_items = document.getElementById(count_of_items);
-        div_add_items=document.getElementById(add_more_items);
-            let x = parseInt(count_items.innerHTML); // Get the current count as an integer
-            if(x==1){
-                div_add_items.style.display="none";
-                add_btn.style.display="block";
-                price.style.display="block";
-                count_items.innerHTML = 1;
-                return;
-            }
-            x = x - 1;
-            count_items.innerHTML = x;
-        sessionStorage.setItem("price", (price.innerHTML));
-        sessionStorage.setItem("count_items", (count_items.innerHTML));
-        // const cart_btn = sessionStorage.getItem("cart_btn");
-        // console.log(cart_btn);
-        // cart_btn = "hii";
-    }
-
-   
-</script>  -->
-<!-- 
-<script>
-    function cart_items_display() {
-        updateCartText();
-    }
-
-    function updateCartText() {
-        // Retrieve the cart data from localStorage (if it exists)
-        const cartData = localStorage.getItem("cartData");
-
-        // Check if cartData exists and is not null
-        if (cartData) {
-            const { price, count } = JSON.parse(cartData);
-            const cartText = `${price} ${count}`;
-            document.getElementById("cart_text").textContent = cartText;
-        }
-    }
-</script> -->
-<!-- <script>
+ <script>
     
-    
-    
-        // Use the retrieved ID as needed
-        if (cart_btn) {
-            
-            console.log("Received Item ID:", cart_btn);
-        
-        } else {
-            console.log("Item ID not found in sessionStorage.");
-        }
-</script> -->
+items = {
+    name_items: {
 
+    },
+    price_item: {
+    },
+    count_item: {
+
+    }
+
+
+}
+function add_more(button_Id, price_item, add_more_items, name, img) {
+    let name_item = document.getElementById(name);
+    let add_btn = document.getElementById(button_Id);
+    let price = document.getElementById(price_item);
+    div_add_items = document.getElementById(add_more_items);
+    div_add_items.style.display = "block";
+    div_add_items.style.display = "flex";
+    add_btn.style.display = "none";
+    price.style.display = "none";
+    const price_val = price.innerHTML;
+    const name_val = name_item.innerHTML;
+    items.name_items[name_val] = name_val;
+    items.price_item[name_val] = (price_val).substring(4);
+    items.count_item[name_val] = 1;
+    sessionStorage.setItem("items", JSON.stringify(items));
+    console.log(items)
+
+
+
+}
+
+function increment(count_of_items, name, price_item) {
+    let count_items = document.getElementById(count_of_items);
+    let name_item = document.getElementById(name);
+    let price = document.getElementById(price_item);
+
+    let x = parseInt(count_items.innerHTML); // Get the current count as an integer
+    x = x + 1;
+    count_items.innerHTML = x;
+    let name_val = name_item.innerHTML;
+    let price_val = price.innerHTML;
+
+    items.name_items[name_val] = name_val;
+    items.price_item[name_val] = parseInt(price_val.substring(4)) * x;
+    items.count_item[name_val] = x;
+
+    sessionStorage.setItem("items", JSON.stringify(items));
+
+}
+function decrement(count_of_items, add_more_items, button_Id, price_item, name) {
+    let add_btn = document.getElementById(button_Id);
+    let name_item = document.getElementById(name);
+    let price = document.getElementById(price_item);
+    let count_items = document.getElementById(count_of_items);
+    div_add_items = document.getElementById(add_more_items);
+    let x = parseInt(count_items.innerHTML); // Get the current count as an integer
+    let name_val = name_item.innerHTML;
+    let price_val = price.innerHTML;
+    if (x == 1) {
+        div_add_items.style.display = "none";
+        add_btn.style.display = "block";
+        price.style.display = "block";
+        count_items.innerHTML = 1;
+        items.name_items[name_val] = name_val;
+        items.price_item[name_val] = parseInt(price_val.substring(4)) ;
+        items.count_item[name_val] = 1;
+        return;
+    }
+    x = x - 1;
+    count_items.innerHTML = x;
+
+    items.name_items[name_val] = name_val;
+    items.price_item[name_val] = parseInt(price_val.substring(4)) * x;
+    items.count_item[name_val] = x;
+
+
+    sessionStorage.setItem("items", JSON.stringify(items));
+
+
+}
+
+ </script>
 </html>

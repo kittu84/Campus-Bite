@@ -14,18 +14,18 @@
         <div class="total-items-sub">
             <div class="item">
                 <div>
-                    <img src="../Images/kullad-chai.png" alt="Chai">
+                    <img id="img1" src="../Images/kullad-chai.png" alt="Chai">
                 </div>
-                <h3>Tea</h3>
+                <h3 id="name1">Tea</h3>
                 <div class="price-button">
                     <h4 id="price1">Rs. 13</h4>
                     <button class="white_btn" id="add_btn1"
-                        onclick="add_more('add_btn1','price1','add_more_items1')">Add</button>
+                        onclick="add_more('add_btn1','price1','add_more_items1','name1','img1')">Add</button>
                     <div class="add_more_items" id="add_more_items1">
                         <button class="white_btn" id="add_btn1"
-                            onclick="decrement('count_of_items1','add_more_items1','add_btn1','price1')">-</button>
+                            onclick="decrement('count_of_items1','add_more_items1','add_btn1','price1','name1')">-</button>
                         <p class="count" id="count_of_items1">1</p>
-                        <button class="white_btn" id="add_btn1" onclick="increment('count_of_items1')">+</button>
+                        <button class="white_btn" id="add_btn1" onclick="increment('count_of_items1','name1','price1')">+</button>
                     </div>
                 </div>
             </div>
@@ -129,5 +129,90 @@
 
 
 </body>
+<script>
+    
+items2 = {
+    name_items: {
 
+    },
+    price_item: {
+    },
+    count_item: {
+
+    }
+
+
+}
+function add_more(button_Id, price_item, add_more_items, name, img) {
+    let name_item = document.getElementById(name);
+    let add_btn = document.getElementById(button_Id);
+    let price = document.getElementById(price_item);
+    div_add_items = document.getElementById(add_more_items);
+    div_add_items.style.display = "block";
+    div_add_items.style.display = "flex";
+    add_btn.style.display = "none";
+    price.style.display = "none";
+    const price_val = price.innerHTML;
+    const name_val = name_item.innerHTML;
+    items2.name_items[name_val] = name_val;
+    items2.price_item[name_val] = (price_val).substring(4);
+    items2.count_item[name_val] = 1;
+    sessionStorage.setItem("items2", JSON.stringify(items2));
+    console.log(items2)
+
+
+
+}
+
+function increment(count_of_items, name, price_item) {
+    let count_items = document.getElementById(count_of_items);
+    let name_item = document.getElementById(name);
+    let price = document.getElementById(price_item);
+
+    let x = parseInt(count_items.innerHTML); // Get the current count as an integer
+    x = x + 1;
+    count_items.innerHTML = x;
+    let name_val = name_item.innerHTML;
+    let price_val = price.innerHTML;
+
+    items2.name_items[name_val] = name_val;
+    items2.price_item[name_val] = parseInt(price_val.substring(4)) * x;
+    items2.count_item[name_val] = x;
+
+    sessionStorage.setItem("items2", JSON.stringify(items2));
+
+}
+function decrement(count_of_items, add_more_items, button_Id, price_item, name) {
+    let add_btn = document.getElementById(button_Id);
+    let name_item = document.getElementById(name);
+    let price = document.getElementById(price_item);
+    let count_items = document.getElementById(count_of_items);
+    div_add_items = document.getElementById(add_more_items);
+    let x = parseInt(count_items.innerHTML); // Get the current count as an integer
+    let name_val = name_item.innerHTML;
+    let price_val = price.innerHTML;
+    if (x == 1) {
+        div_add_items.style.display = "none";
+        add_btn.style.display = "block";
+        price.style.display = "block";
+        count_items.innerHTML = 1;
+        items2.name_items[name_val] = name_val;
+        items2.price_item[name_val] = parseInt(price_val.substring(4)) ;
+        items2.count_item[name_val] = 1;
+        return;
+    }
+    x = x - 1;
+    count_items.innerHTML = x;
+
+    items2.name_items[name_val] = name_val;
+    items2.price_item[name_val] = parseInt(price_val.substring(4)) * x;
+    items2.count_item[name_val] = x;
+
+
+    sessionStorage.setItem("items2", JSON.stringify(items2));
+
+
+}
+
+</script>
 </html>
