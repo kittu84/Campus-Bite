@@ -119,9 +119,10 @@
     padding-bottom:10px 0px;
     margin-bottom:30px;
 }
+
 .footer{
-    padding:45px 0;
-    border-top:3px solid rgb(252,184,107);
+    padding:50px 0;
+    border-top:2px solid rgb(252,184,107);
     background-color:rgb(252,222,195);
     display:flex;
     flex-wrap: wrap;
@@ -135,20 +136,14 @@
     padding-bottom: 20px;
     padding-top:-20px;
     box-shadow:4px rgb(97, 72, 49);
-
 }
 
 .footer-1 p{
     cursor:pointer;
-    font-size:16px;
+    font-size:20px;
     padding:2px;
     color:black;
     font-weight:bold;   
-}
-
-.footer-1 address{
-    font-family: "Roboto", sans-serif;
-    
 }
 
 .footer-2{
@@ -163,5 +158,5 @@
 }
 
 .footer-2 h2{
-    font-family: "Roboto", sans-serif;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
