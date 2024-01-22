@@ -1,4 +1,5 @@
 #Online Canteen Ordering website (CAMPUS BITE)
+Me and my friends have built a frontend project for Canteen Management System for our college using HTML, CSS, JS.
 
 ### Real-Time Ordering
 
@@ -11,3 +12,5 @@
 - Schedule your orders in advance, ensuring you get your food when you need it.
 
 Whether you're in a rush or planning your meals in advance, our system makes canteen food accessible and hassle-free for Nirma University students.
+
+
